@@ -47,6 +47,9 @@ def create_ics_file(input_filename, use_google_maps):
     cal = Calendar()
     timetable_data = find_timetable_data_in_file(input_filename)
 
+    if timetable_data == None:
+        print("ERR - Could not find timetable in input.html.")
+
     for item in timetable_data:
         # Get item data.
         item_emoji = get_emoji_for_event_type(item["type"])
@@ -97,7 +100,7 @@ def main():
     print("-" * 40)
     print("MyTimetable iCal Generator by Amren Stephenson")
     print("-" * 40)
-    print("Go to MyTimetable and select the week view. Then choose 'File>Save Page As' and select the format 'Web Page, HTML Only'. Put that file in the same folder as this script, and rename the file 'input.html'.")
+    print("Go to MyTimetable and select the month view. Then choose 'File>Save Page As' and select the format 'Web Page, HTML Only'. Put that file in the same folder as this script, and rename the file 'input.html'.")
     print("-" * 40)
     use_google_maps = input("Use Google Maps? Y - Google, N - Apple\n").lower() == "y"
     create_ics_file("input.html", use_google_maps)
