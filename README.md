@@ -1,4 +1,8 @@
 # timetable-ics
+
+| :warning:     | This is not affiliated with nor endorsed by any University.      |
+|---------------|:-----------------------------------------------------------------|
+
 A simple Python script to scrape the JSON data from the month view of a user's [Durham MyTimetable](https://mytimetable.durham.ac.uk/calendar). It then creates a nicely formatted `.ics` file (including emojis!), which can be imported into your preferred calendar app.
 
 ## Instructions
