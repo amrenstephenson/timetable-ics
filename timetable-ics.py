@@ -12,7 +12,7 @@ def find_timetable_data_in_file(filename):
     return None
 
 def get_emoji_for_event_type(event_type):
-    EVENT_EMOJIS = {"Practical":"👨‍💻", "Tutorial": "👨‍💻", "Lecture": "🎓", "Drop-In Class": "⬇", "Online Lecture":"🌐", "Online Computer Class": "🌐", "Seminar":"⌛"}
+    EVENT_EMOJIS = {"Practical":"👨‍💻", "Tutorial": "👨‍💻", "Lecture": "🎓", "Drop-In Class": "⬇", "Online Lecture":"🌐", "Online Computer Class": "🌐", "Seminar":"⌛", "Computer Class": "🖥️"}
     if event_type in EVENT_EMOJIS:
         return EVENT_EMOJIS[event_type]
     return "❓"
